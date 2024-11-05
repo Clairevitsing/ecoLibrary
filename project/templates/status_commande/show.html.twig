@@ -1,0 +1,26 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}StatusCommande{% endblock %}
+
+{% block body %}
+    <h1>StatusCommande</h1>
+
+    <table class="table">
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ status_commande.id }}</td>
+            </tr>
+            <tr>
+                <th>Libelle</th>
+                <td>{{ status_commande.libelle }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <a href="{{ path('app_status_commande_index') }}">back to list</a>
+
+    <a href="{{ path('app_status_commande_edit', {'id': status_commande.id}) }}">edit</a>
+
+    {{ include('status_commande/_delete_form.html.twig') }}
+{% endblock %}

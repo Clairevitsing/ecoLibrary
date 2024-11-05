@@ -1,0 +1,11 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}New StatusCommande{% endblock %}
+
+{% block body %}
+    <h1>Create new StatusCommande</h1>
+
+    {{ include('status_commande/_form.html.twig') }}
+
+    <a href="{{ path('app_status_commande_index') }}">back to list</a>
+{% endblock %}
